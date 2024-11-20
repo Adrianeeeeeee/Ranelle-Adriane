@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Furniture Haven</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark floating-navbar">
+            <a class="navbar-brand" href="#">Furniture Adriane</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="products.html" role="button">Shop Now</a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle profile-button" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="profile.html">Profile</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="addtocart.html"
+                            role="button">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>        
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="text-center">About Us</h2>
+                <p class="text-center">
+                    At Furniture Adriane, we are your trusted destination for
+                    quality furniture that combines style and
+                    comfort. Our wide range of products is crafted with
+                    excellence, designed to transform your home into a
+                    sanctuary. Each piece reflects our commitment to quality and
+                    aesthetics, ensuring your living space
+                    feels inviting and personalized.
+                </p>
+                <div class="mission-vision text-center">
+                    <h3>Our Mission</h3>
+                    <p>To provide exceptional furniture solutions that enhance
+                        the beauty and functionality of your living
+                        spaces.</p>
+                    <h3>Our Vision</h3>
+                    <p>To be a leading furniture brand known for innovative
+                        designs, quality craftsmanship, and customer
+                        satisfaction.</p>
+                </div>
+                <div class="team">
+                    <h3>Meet Our Team</h3>
+                    <p>Our dedicated team of professionals is committed to
+                        providing you with the best furniture solutions
+                        and customer service.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="team-member">
+                                <img src="pictures/team-member1.jpg"
+                                    alt="Team Member 1" class="img-fluid">
+                                <h4>Jane</h4>
+                                <p>Founder & CEO</p>
+                                <p>Jane has over 10 years of experience in the
+                                    furniture industry and is passionate about
+                                    creating innovative designs.</p>
+                                <div class="social-links">
+                                    <a href="https://linkedin.com/in/janedoe"
+                                        target="_blank">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-member">
+                                <img src="pictures/team-member2.jpg"
+                                    alt="Team Member 2" class="img-fluid">
+                                <h4>James</h4>
+                                <p>Head of Design</p>
+                                <p>James specializes in modern furniture design
+                                    and has worked with various renowned brands.
+                                </p>
+                                <div class="social-links">
+                                    <a href="https://linkedin.com/in/johnsmith"
+                                        target="_blank">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-member">
+                                <img src="pictures/team-member3.jpg"
+                                    alt="Team Member 3" class="img-fluid">
+                                <h4>Emalyn</h4>
+                                <p>Customer Service Manager</p>
+                                <p>Emalyn ensures our customers have the best
+                                    experience and resolves any issues they may
+                                    encounter.</p>
+                                <div class="social-links">
+                                    <a
+                                        href="https://linkedin.com/in/alicejohnson"
+                                        target="_blank">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-statement">
+                        <p>We are committed to delivering the best furniture
+                            solutions, ensuring customer satisfaction, and
+                            fostering a collaborative work environment.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+            aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="login-email">Email address</label>
+                                <input type="email" class="form-control"
+                                    id="login-email"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control"
+                                    id="login-password" placeholder="Password">
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary">Login</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <p>Don't have an account? <a href="#"
+                                    onclick="toggleToSignUp()">Sign Up
+                                    here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog"
+            aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signupModalLabel">Sign
+                            Up</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="signup-name">Name</label>
+                                <input type="text" class="form-control"
+                                    id="signup-name"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-email">Email address</label>
+                                <input type="email" class="form-control"
+                                    id="signup-email"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-password">Password</label>
+                                <input type="password" class="form-control"
+                                    id="signup-password"
+                                    placeholder="Create a password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-confirm-password">Confirm
+                                    Password</label>
+                                <input type="password" class="form-control"
+                                    id="signup-confirm-password"
+                                    placeholder="Confirm your password"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign
+                                Up</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <p>Already have an account? <a href="#"
+                                    onclick="toggleModals()">Login here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center">
+            <p>&copy; 2024 Furniture Adriane. All Rights Reserved.</p>
+            <p>Follow us on:
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

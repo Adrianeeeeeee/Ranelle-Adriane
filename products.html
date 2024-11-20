@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Furniture Haven</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+
+    <body>
+
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-dark floating-navbar">
+            <a class="navbar-brand" href="#">Furniture Adriane</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link"
+                            href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="about.html">About Us</a></li>
+                    <li class="nav-item active"><a class="nav-link"
+                            href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="contact.html">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="products.html"
+                            role="button">Shop Now</a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle profile-button"
+                            href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu"
+                            aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"
+                                href="profile.html">Profile</a>
+                            <a class="dropdown-item" href="#"
+                                data-toggle="modal"
+                                data-target="#loginModal">Login</a>
+                            <a class="dropdown-item" href="#"
+                                data-toggle="modal"
+                                data-target="#signupModal">Sign Up</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="addtocart.html"
+                            role="button">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="products-section">
+            <h2>Our Products</h2>
+
+            <!-- Category Filter and Search Bar -->
+            <div class="input-group mb-3">
+                <!-- Category Filter Dropdown -->
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary dropdown-toggle"
+                        type="button" id="categoryDropdown"
+                        data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Filter by Category</button>
+                    <div class="dropdown-menu p-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"
+                                id="allCategories"
+                                onchange="selectAllCategories(this)">
+                            <label class="form-check-label"
+                                for="allCategories">All Categories</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox"
+                                class="form-check-input category-checkbox"
+                                value="Living Room Set" id="livingRoomSet"
+                                onchange="filterByCategory()">
+                            <label class="form-check-label"
+                                for="livingRoomSet">Living Room Set</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox"
+                                class="form-check-input category-checkbox"
+                                value="Bedroom Set" id="bedroomSet"
+                                onchange="filterByCategory()">
+                            <label class="form-check-label"
+                                for="bedroomSet">Bedroom Set</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox"
+                                class="form-check-input category-checkbox"
+                                value="Office Desk" id="officeDesk"
+                                onchange="filterByCategory()">
+                            <label class="form-check-label"
+                                for="officeDesk">Office Desk</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <input type="text" id="searchBar"
+                    placeholder="Search for products..."
+                    onkeyup="filterProducts()">
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="price-range mt-3">
+                <label for="minPrice">Price Range (₱):</label>
+                <input type="number" id="minPrice" placeholder="Min ₱">
+                <input type="number" id="maxPrice" placeholder="Max ₱">
+                <button class="btn btn-primary"
+                    onclick="filterByPrice()">Filter</button>
+            </div>
+
+            <div class="row" id="productList">
+                <div class="col-md-4 product-item" data-name="Office Desk"
+                    data-price="499">
+                    <img src="pictures/furniture3.jpg" alt="Office Desk">
+                    <h4>Office Desk</h4>
+                    <p>Functional and modern desks for productive
+                        workspaces.</p>
+                    <p>Price: ₱499</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Living Room Set"
+                    data-price="799">
+                    <img src="pictures/furniture1.jpg" alt="Living Room Set">
+                    <h4>Living Room Set</h4>
+                    <p>Stylish and comfortable pieces to make your living space
+                        inviting.</p>
+                    <p>Price: ₱799</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Bedroom Set"
+                    data-price="899">
+                    <img src="pictures/furniture2.jpg" alt="Bedroom Set">
+                    <h4>Bedroom Set</h4>
+                    <p>Elegant designs that bring relaxation to your
+                        bedroom.</p>
+                    <p>Price: ₱899</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Coffee Table"
+                    data-price="299">
+                    <img src="pictures/furniture5.jpg" alt="Coffee Table">
+                    <h4>Coffee Table</h4>
+                    <p>Stylish table to enhance your living room decor.</p>
+                    <p>Price: ₱299</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Study Chair"
+                    data-price="250">
+                    <img src="pictures/furniture7.jpg" alt="Study Chair">
+                    <h4>Study Chair</h4>
+                    <p>Comfortable and ergonomic chair for your study area.</p>
+                    <p>Price: ₱250</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Nightstand"
+                    data-price="180">
+                    <img src="pictures/furniture8.jpg" alt="Nightstand">
+                    <h4>Nightstand</h4>
+                    <p>Convenient storage for your bedside essentials.</p>
+                    <p>Price: ₱180</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Armchair"
+                    data-price="450">
+                    <img src="pictures/furniture9.jpg" alt="Armchair">
+                    <h4>Armchair</h4>
+                    <p>Comfortable seating for any living space.</p>
+                    <p>Price: ₱450</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Bar Stool"
+                    data-price="180">
+                    <img src="pictures/furniture10.jpg" alt="Bar Stool">
+                    <h4>Bar Stool</h4>
+                    <p>Stylish stool for your kitchen or bar area.</p>
+                    <p>Price: ₱180</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Recliner Chair"
+                    data-price="950">
+                    <img src="pictures/furniture11.jpg" alt="Recliner Chair">
+                    <h4>Recliner Chair</h4>
+                    <p>Perfect for relaxing after a long day.</p>
+                    <p>Price: ₱950</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Side Table"
+                    data-price="400">
+                    <img src="pictures/furniture12.jpg" alt="Side Table">
+                    <h4>Side Table</h4>
+                    <p>Compact and stylish table for any room.</p>
+                    <p>Price: ₱400</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+                <div class="col-md-4 product-item" data-name="Armchair Set"
+                    data-price="1500">
+                    <img src="pictures/furniture13.jpg" alt="Armchair Set">
+                    <h4>Armchair Set</h4>
+                    <p>Set of elegant armchairs for your living room.</p>
+                    <p>Price: ₱1500</p>
+                    <button class="add-to-cart" id="addToCartButton">Add to
+                        Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!--login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+            aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"
+                            id="loginModalLabel">Login</h5>
+                        <button type="button" class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="login-email">Email
+                                    address</label>
+                                <input type="email" class="form-control"
+                                    id="login-email"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control"
+                                    id="login-password"
+                                    placeholder="Password">
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary">Login</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <p>Don't have an account? <a href="#"
+                                    onclick="toggleToSignUp()">Sign Up
+                                    here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog"
+            aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signupModalLabel">Sign
+                            Up</h5>
+                        <button type="button" class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="signup-name">Name</label>
+                                <input type="text" class="form-control"
+                                    id="signup-name"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-email">Email
+                                    address</label>
+                                <input type="email" class="form-control"
+                                    id="signup-email"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    for="signup-password">Password</label>
+                                <input type="password" class="form-control"
+                                    id="signup-password"
+                                    placeholder="Create a password"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-confirm-password">Confirm
+                                    Password</label>
+                                <input type="password" class="form-control"
+                                    id="signup-confirm-password"
+                                    placeholder="Confirm your password"
+                                    required>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary">Sign
+                                Up</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <p>Already have an account? <a href="#"
+                                    onclick="toggleModals()">Login
+                                    here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <p>&copy; 2024 Furniture Adriane. All Rights Reserved.</p>
+            <p>Follow us on:
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </footer>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js">
+        </script>
+    </body>
+
+</html>

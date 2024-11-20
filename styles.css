@@ -1,0 +1,453 @@
+body {
+    background-color: #2c2c2c;
+    color: #f8f9fa;
+}
+
+.add-to-cart {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body {
+    padding-top: 100px; /* Adjust based on navbar height */
+}
+
+
+.floating-navbar {
+    background-color: #343a40; /* Background color */
+    width: 90%; /* Adjust width */
+    max-width: 1200px; /* Set max width */
+    padding: 10px 20px; /* Spacing around the navbar items */
+    border-radius: 40px; /* Rounded corners */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: fixed; /* Fixed position at the top */
+    top: 20px; /* Space from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 1000; /* Make sure it’s above other content */
+}
+
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar Items Styling */
+.navbar-nav .nav-link {
+    color: #ddd;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa; /* Lighter hover effect */
+}
+
+/* 'Shop Now' Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Button Styling */
+.btn-light {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #343a40;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #ddd;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+
+.hero-section {
+    background-image: url('pictures/furniture-hero.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-section h1,
+.hero-section a {
+    position: relative;
+    z-index: 2;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Place near other sections related to #about */
+#about {
+    color: #f8f9fa;
+    padding: 2em;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+#about h2 {
+    margin-bottom: 1em;
+    color: #f8f9fa;
+}
+
+#about p {
+    color: #f8f9fa;
+    margin-bottom: 1.5em;
+}
+
+/* New styles for the about section and items */
+.info-section {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #3dbd71;
+    margin-right: 10px;
+}
+
+.info-item h5 {
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.info-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* Image container for About Us section */
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #3dbd71;
+}
+
+.mission-vision {
+    margin-bottom: 2em;
+}
+
+.mission-vision h3 {
+    color: #f8f9fa;
+}
+
+.team {
+    margin-top: 2em;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.team-member {
+    background-color: #444;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5em;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 80%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.wide-container {
+    max-width: 90%;
+    padding-left: 15px; /* Optional: To maintain consistent spacing */
+    padding-right: 15px;
+}
+
+.carousel-item img {
+    padding: 10px;
+    max-height: 500px; /* Limit height if needed */
+    object-fit: cover;
+}
+
+.team-member h4 {
+    margin-bottom: 0.3em;
+    color: white;
+}
+
+.team-member p {
+    color: #777;
+}
+
+#products {
+    background-color: #444;
+    color: #f8f9fa;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1em;
+}
+
+#products .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#products .col-md-4 {
+    border: 2px solid #f8f9fa;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: #444;
+    color: #f8f9fa;
+    flex: 1;
+    min-width: 250px;
+}
+
+#testimonials {
+    height: 400px; /* Adjust height as needed */
+    background-color: transparent;
+    padding: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 250px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.testimonial-author {
+    text-align: right;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin: 10px 0;
+    }
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    padding: 1.5em 0;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f8f9fa;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.products-section {
+    background-color: #444;
+    color: #f8f9fa;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1em;
+}
+
+.product-item {
+    border: none;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.products-section h2 {
+    margin-bottom: 1.5em;
+}
+
+.product-item {
+    display: block;
+}
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-form {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Custom styles for the modal */
+.modal-content {
+    background-color: #4CAF50; /* Change this to match your header's background color */
+    border: none; /* Optional: remove border */
+}
+.modal-header, .modal-body {
+    border: none; /* Optional: remove border from header and body */
+}
+.modal-title {
+    color: #fff; /* Change this to a contrasting color for better readability */
+}
+.form-control {
+    color: #333; /* Text color for input fields */
+    background-color: #fff; /* Background color for input fields */
+}
+.btn-primary {
+    background-color: #fff; /* Change button color if needed */
+    color: #4CAF50; /* Change text color of button to match header */
+    border-color: #4CAF50; /* Change button border color to match header */
+}
+.btn-primary:hover {
+    background-color: #e7e7e7; /* Change hover color if needed */
+    border-color: #4CAF50; /* Keep border color on hover */
+}
+
+
+
+
+
